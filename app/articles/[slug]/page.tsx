@@ -4,8 +4,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { getArticle, getAllArticleSlugs, getArticles } from "@/lib/payload";
 import { companyInfo } from "@/lib/services";
+import ArticleCharts from "@/app/ArticleCharts";
 
-export const revalidate = 3600; // ISR
+export const revalidate = 60; // ISR: 每分钟重新验证
 
 // 构建时预生成所有文章页
 export async function generateStaticParams() {
@@ -162,12 +163,13 @@ export default async function ArticlePage({
             <span>{companyInfo.name}</span>
           </div>
           {article.coverImage && (
-            <div className="relative h-400 rounded-xl overflow-hidden mb-8">
+            <div className="relative aspect-[21/9] rounded-xl overflow-hidden mb-8 bg-neutral-100">
               <Image
                 src={article.coverImage}
                 alt={article.title}
                 fill
                 priority
+                sizes="(max-width: 896px) 100vw, 896px"
                 className="object-cover"
               />
             </div>
@@ -182,6 +184,7 @@ export default async function ArticlePage({
             className="prose-content"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
+          <ArticleCharts />
 
           {/* CTA */}
           <div className="mt-12 p-8 bg-brand-50 rounded-xl text-center">
@@ -288,12 +291,13 @@ export default async function ArticlePage({
                     className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-neutral-200"
                   >
                     {relArticle.coverImage && (
-                      <div className="relative h-40 overflow-hidden">
+                      <div className="relative aspect-[21/9] overflow-hidden bg-neutral-100">
                         <Image
                           src={relArticle.coverImage}
                           alt={relArticle.title}
                           fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     )}

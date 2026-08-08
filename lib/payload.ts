@@ -6,6 +6,12 @@
 const PAYLOAD_URL = process.env.NEXT_PUBLIC_PAYLOAD_URL || 'https://payload.ra0.cn'
 const PAYLOAD_API_KEY = process.env.PAYLOAD_API_KEY || ''
 
+// 媒体库返回的 url 可能已是绝对地址（https://payload.ra0.cn/api/media/file/...），
+// 此时不能再拼 PAYLOAD_URL，否则会变成 https://…https://… 双 URL 导致缩略图裂图。
+function toAbsUrl(url: string): string {
+  return /^https?:\/\//.test(url) ? url : `${PAYLOAD_URL}${url}`
+}
+
 // 当前站点标识
 const SITE_SLUG = 'lov0u'
 
@@ -44,7 +50,7 @@ function mapArticleListItem(doc: any): ArticleListItem {
     slug: doc.slug || `article-${doc.id}`,
     excerpt: doc.excerpt || '',
     coverImage: doc.coverImage?.url
-      ? `${PAYLOAD_URL}${doc.coverImage.url}`
+      ? toAbsUrl(doc.coverImage.url)
       : undefined,
     publishedAt: doc.publishedAt || doc.createdAt || new Date().toISOString(),
   }
@@ -58,7 +64,7 @@ function mapArticle(doc: any): Article {
     excerpt: doc.excerpt || '',
     content: doc.content || '',
     coverImage: doc.coverImage?.url
-      ? `${PAYLOAD_URL}${doc.coverImage.url}`
+      ? toAbsUrl(doc.coverImage.url)
       : undefined,
     publishedAt: doc.publishedAt || doc.createdAt || new Date().toISOString(),
     metaTitle: doc.metaTitle || doc.title,
