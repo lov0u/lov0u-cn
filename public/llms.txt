@@ -1,0 +1,21 @@
+# 海天物资回收
+
+> 海天物资回收是一家位于烟台的专业废旧物资回收企业，长期高价回收废铜、废铝、废铁废钢、废不锈钢、废塑料、废旧电子、废旧电缆电线、废旧设备等各类废旧物资，提供上门看货评估、现场定价、即时结算的一站式回收服务。
+
+## 主要页面
+- [首页](https://lov0u.cn/): 海天物资回收官方网站，提供废旧物资回收服务介绍和联系方式
+- [关于我们](https://lov0u.cn/about/): 海天物资回收企业介绍、资质和服务理念
+- [废铜回收](https://lov0u.cn/services/scrap-copper/): 紫铜、黄铜、青铜、铜线、铜管等废铜材料高价回收
+- [废铝回收](https://lov0u.cn/services/scrap-aluminum/): 铝合金、铝板、铝线、易拉罐等废铝材料回收
+- [废铁废钢回收](https://lov0u.cn/services/scrap-iron-steel/): 建筑废铁、工业废钢、钢筋、钢板等黑色金属回收
+- [废不锈钢回收](https://lov0u.cn/services/scrap-stainless-steel/): 304、316、201等各类废不锈钢专业检测回收
+- [废塑料回收](https://lov0u.cn/services/scrap-plastic/): PE、PP、PVC、PET、ABS等各类废旧塑料分类回收
+- [废旧电子回收](https://lov0u.cn/services/scrap-electronics/): 废旧电脑、手机、家电等电子产品回收与数据销毁
+- [废旧电缆电线回收](https://lov0u.cn/services/scrap-cable-wire/): 电力电缆、通信电缆、光缆等废旧电缆专业评估回收
+- [废旧设备回收](https://lov0u.cn/services/scrap-equipment/): 工业设备、机械设备、生产线等废旧设备整体回收
+- [新闻资讯](https://lov0u.cn/articles/): 废旧物资回收行业动态、价格行情、环保知识
+- [联系我们](https://lov0u.cn/contact/): 联系电话18354479555，烟台及周边地区上门服务
+
+## 站点信息
+- [网站地图](https://lov0u.cn/sitemap.xml): XML 格式站点地图
+- [robots.txt](https://lov0u.cn/robots.txt): 爬虫访问规则
