@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getArticles } from "@/lib/strapi";
+import { getArticles } from "@/lib/payload";
 import { companyInfo } from "@/lib/services";
 
 export const revalidate = 3600; // ISR: 每小时重新验证
