@@ -6,3 +6,5 @@ lov0u.cn 网站 - Next.js
 <!-- Docker rebuild - 2026-08-08 10:17:05 -->
 
 <!-- Fix cache - 2026-08-08 10:18:42 -->
+
+<!-- Fix Dockerfile - 2026-08-08 10:20:57 -->
