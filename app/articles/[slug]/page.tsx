@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { getArticle, getAllArticleSlugs, getArticles } from "@/lib/strapi";
+import { getArticle, getAllArticleSlugs, getArticles } from "@/lib/payload";
 import { companyInfo } from "@/lib/services";
 
 export const revalidate = 3600; // ISR
