@@ -162,18 +162,6 @@ export default async function ArticlePage({
             <span>|</span>
             <span>{companyInfo.name}</span>
           </div>
-          {article.coverImage && (
-            <div className="relative aspect-[21/9] rounded-xl overflow-hidden mb-8 bg-neutral-100">
-              <Image
-                src={article.coverImage}
-                alt={article.title}
-                fill
-                priority
-                sizes="(max-width: 896px) 100vw, 896px"
-                className="object-cover"
-              />
-            </div>
-          )}
         </div>
       </section>
 
