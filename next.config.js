@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 使用 ISR 模式（不再是静态导出）
-  // output: 'export' 已移除，支持动态文章页面
+  output: 'standalone',
 
   // 图片配置
   images: {
