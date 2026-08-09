@@ -50,8 +50,6 @@ export default async function ArticlesPage() {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                         />
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
                       </div>
                     ) : (
                       <div className="aspect-[21/9] bg-neutral-200 flex items-center justify-center">
