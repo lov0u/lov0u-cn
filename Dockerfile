@@ -32,6 +32,9 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
+# Fix ownership so ISR cache writes work (non-root nextjs needs write access to .next)
+RUN chown -R nextjs:nextjs /app
+
 # Set user
 USER nextjs
 
