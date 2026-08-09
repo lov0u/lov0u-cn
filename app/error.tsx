@@ -11,7 +11,7 @@ export default function ErrorPage({
 }) {
   useEffect(() => {
     try {
-      fetch("/api/log-error", {
+      fetch("/api/log-error/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
