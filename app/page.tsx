@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { services, companyInfo } from "@/lib/services";
 
+export const revalidate = 60; // ISR: 每分钟重新验证，避免旧 HTML 缓存引用已清理的旧 chunk
+
 export default function HomePage() {
   return (
     <>
