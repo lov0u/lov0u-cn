@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { companyInfo, services } from "@/lib/services";
 
 export const metadata: Metadata = {
@@ -17,12 +16,11 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-300 overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <img
             src="/images/hero-recycling-facility.jpg"
             alt="海天物资回收"
-            fill
-            priority
-            className="object-cover"
+            loading="eager"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
@@ -62,11 +60,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-400 rounded-2xl overflow-hidden shadow-lg">
-              <Image
+              <img
                 src="/images/hero-recycling-facility.jpg"
                 alt="海天物资回收"
-                fill
-                className="object-cover"
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

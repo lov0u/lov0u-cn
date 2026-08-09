@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { getArticles } from "@/lib/payload";
 import { companyInfo } from "@/lib/services";
 
@@ -45,11 +44,12 @@ export default async function ArticlesPage() {
                   >
                     {article.coverImage ? (
                       <div className="relative aspect-[21/9] overflow-hidden bg-neutral-100">
-                        <Image
+                        <img
                           src={article.coverImage}
                           alt={article.title}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>

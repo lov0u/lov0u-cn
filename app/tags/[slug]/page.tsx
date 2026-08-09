@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getArticlesByTag, getAllTagSlugs } from "@/lib/payload";
 import { companyInfo } from "@/lib/services";
@@ -92,11 +91,11 @@ export default async function TagArticlesPage({
                   >
                     {article.coverImage && (
                       <div className="relative h-48 overflow-hidden">
-                        <Image
+                        <img
                           src={article.coverImage}
                           alt={article.title}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </div>
                     )}

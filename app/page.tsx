@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { services, companyInfo } from "@/lib/services";
 
 export default function HomePage() {
@@ -8,12 +7,11 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[600px] overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <img
             src="/images/hero-recycling-facility.jpg"
             alt="海天物资回收 - 专业废旧物资回收服务"
-            fill
-            priority
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
@@ -104,11 +102,11 @@ export default function HomePage() {
                 className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <Image
+                  <img
                     src={service.image}
                     alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <h3 className="absolute bottom-3 left-4 text-xl font-bold text-white">
@@ -278,12 +276,12 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="relative h-400 rounded-2xl overflow-hidden shadow-lg">
-              <Image
+            <div className="relative aspect-[21/9] rounded-2xl overflow-hidden shadow-lg">
+              <img
                 src="/images/hero-recycling-facility.jpg"
                 alt="海天物资回收工厂"
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>

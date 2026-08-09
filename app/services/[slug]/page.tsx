@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { services, companyInfo, type Service } from "@/lib/services";
 
@@ -104,12 +103,11 @@ export default async function ServicePage({
       {/* Hero Section */}
       <section className="relative h-400 overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <img
             src={service.image}
             alt={service.title}
-            fill
-            priority
-            className="object-cover"
+            loading="eager"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
@@ -343,11 +341,11 @@ export default async function ServicePage({
                 className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative h-40 overflow-hidden">
-                  <Image
+                  <img
                     src={rel.image}
                     alt={rel.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <h3 className="absolute bottom-3 left-4 text-lg font-bold text-white">

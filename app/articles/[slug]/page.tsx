@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getArticle, getAllArticleSlugs, getArticles } from "@/lib/payload";
 import { companyInfo } from "@/lib/services";
@@ -280,11 +279,12 @@ export default async function ArticlePage({
                   >
                     {relArticle.coverImage && (
                       <div className="relative aspect-[21/9] overflow-hidden bg-neutral-100">
-                        <Image
+                        <img
                           src={relArticle.coverImage}
                           alt={relArticle.title}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
